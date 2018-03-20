@@ -4,8 +4,8 @@
 [[projects]]
   name = "cloud.google.com/go"
   packages = ["compute/metadata"]
-  revision = "2d3a6656c17a60b0815b7e06ab0be04eacb6e613"
-  version = "v0.16.0"
+  revision = "20d4028b8a750c2aca76bf9fefa8ed2d0109b573"
+  version = "v0.19.0"
 
 [[projects]]
   name = "github.com/BurntSushi/toml"
@@ -20,10 +20,16 @@
   version = "v0.5.0"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/bmizerany/assert"
+  packages = ["."]
+  revision = "b7ed37b82869576c289d7d97fb2bbd8b64a0cb28"
+
+[[projects]]
   branch = "v2"
   name = "github.com/coreos/go-oidc"
   packages = ["."]
-  revision = "77e7f2010a464ade7338597afe650dfcffbe2ca8"
+  revision = "065b426bd41667456c1a924468f507673629c46b"
 
 [[projects]]
   name = "github.com/davecgh/go-spew"
@@ -32,10 +38,28 @@
   version = "v1.1.0"
 
 [[projects]]
-  branch = "master"
+  name = "github.com/fsnotify/fsnotify"
+  packages = ["."]
+  revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
+  version = "v1.4.7"
+
+[[projects]]
   name = "github.com/golang/protobuf"
   packages = ["proto"]
-  revision = "1e59b77b52bf8e4b449a57e6f79f21226d571845"
+  revision = "925541529c1fa6821df4e44ce2723319eb2be768"
+  version = "v1.0.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/kr/pretty"
+  packages = ["."]
+  revision = "cfb55aafdaf3ec08f0db22699ab822c50091b1c4"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/kr/text"
+  packages = ["."]
+  revision = "7cafcd837844e784b526369c9bce262804aebc60"
 
 [[projects]]
   name = "github.com/mbland/hmacauth"
@@ -58,8 +82,11 @@
 [[projects]]
   branch = "master"
   name = "github.com/pquerna/cachecontrol"
-  packages = [".","cacheobject"]
-  revision = "0dec1b30a0215bb68605dfc568e8855066c9202d"
+  packages = [
+    ".",
+    "cacheobject"
+  ]
+  revision = "525d0eb5f91d30e3b1548de401b7ef9ea6898520"
 
 [[projects]]
   name = "github.com/stretchr/testify"
@@ -70,48 +97,80 @@
 [[projects]]
   branch = "master"
   name = "golang.org/x/crypto"
-  packages = ["ed25519","ed25519/internal/edwards25519"]
-  revision = "9f005a07e0d31d45e6656d241bb5c0f2efd4bc94"
+  packages = [
+    "ed25519",
+    "ed25519/internal/edwards25519"
+  ]
+  revision = "80db560fac1fb3e6ac81dbc7f8ae4c061f5257bd"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
-  packages = ["context","context/ctxhttp"]
-  revision = "9dfe39835686865bff950a07b394c12a98ddc811"
+  packages = [
+    "context",
+    "context/ctxhttp"
+  ]
+  revision = "6078986fec03a1dcc236c34816c71b0e05018fda"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/oauth2"
-  packages = [".","google","internal","jws","jwt"]
-  revision = "9ff8ebcc8e241d46f52ecc5bff0e5a2f2dbef402"
+  packages = [
+    ".",
+    "google",
+    "internal",
+    "jws",
+    "jwt"
+  ]
+  revision = "fdc9e635145ae97e6c2cb777c48305600cf515cb"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  revision = "641605214e7dab930817f68e2fef560efbb033e5"
 
 [[projects]]
   branch = "master"
   name = "google.golang.org/api"
-  packages = ["admin/directory/v1","gensupport","googleapi","googleapi/internal/uritemplates"]
-  revision = "8791354e7ab150705ede13637a18c1fcc16b62e8"
+  packages = [
+    "admin/directory/v1",
+    "gensupport",
+    "googleapi",
+    "googleapi/internal/uritemplates"
+  ]
+  revision = "24928b980e6919be4c72647aacd53ebcbb8c4bab"
 
 [[projects]]
   name = "google.golang.org/appengine"
-  packages = [".","internal","internal/app_identity","internal/base","internal/datastore","internal/log","internal/modules","internal/remote_api","internal/urlfetch","urlfetch"]
+  packages = [
+    ".",
+    "internal",
+    "internal/app_identity",
+    "internal/base",
+    "internal/datastore",
+    "internal/log",
+    "internal/modules",
+    "internal/remote_api",
+    "internal/urlfetch",
+    "urlfetch"
+  ]
   revision = "150dc57a1b433e64154302bdc40b6bb8aefa313a"
   version = "v1.0.0"
 
 [[projects]]
-  name = "gopkg.in/fsnotify.v1"
-  packages = ["."]
-  revision = "836bfd95fecc0f1511dd66bdbf2b5b61ab8b00b6"
-  version = "v1.2.11"
-
-[[projects]]
   name = "gopkg.in/square/go-jose.v2"
-  packages = [".","cipher","json"]
-  revision = "f8f38de21b4dcd69d0413faf231983f5fd6634b1"
-  version = "v2.1.3"
+  packages = [
+    ".",
+    "cipher",
+    "json"
+  ]
+  revision = "6ee92191fea850cdcab9a18867abf5f521cdbadb"
+  version = "v2.1.4"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "efab48a0e196c2a849bfbe9aa02d2ae28d281ce1bfe9f23720d648858eefc8e6"
+  inputs-digest = "1788cb4b377628416254d5279e0a76da669235ca42ce97e5bac6549c24cf8a16"
   solver-name = "gps-cdcl"
   solver-version = 1

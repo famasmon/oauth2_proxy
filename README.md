@@ -4,7 +4,7 @@ oauth2_proxy
 A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others)
 to validate accounts by email, domain or group.
 
-[![Build Status](https://secure.travis-ci.org/bitly/oauth2_proxy.svg?branch=master)](http://travis-ci.org/bitly/oauth2_proxy)
+[![Build Status](https://secure.travis-ci.org/topfreegames/oauth2_proxy.svg?branch=master)](http://travis-ci.org/topfreegames/oauth2_proxy)
 
 
 ![Sign In Page](https://cloud.githubusercontent.com/assets/45028/4970624/7feb7dd8-6886-11e4-93e0-c9904af44ea8.png)
@@ -15,7 +15,7 @@ to validate accounts by email, domain or group.
 
 ## Installation
 
-1. Download [Prebuilt Binary](https://github.com/bitly/oauth2_proxy/releases) (current release is `v2.2`) or build with `$ go get github.com/bitly/oauth2_proxy` which will put the binary in `$GOROOT/bin`
+1. Download [Prebuilt Binary](https://github.com/topfreegames/oauth2_proxy/releases) (current release is `v2.2`) or build with `$ go get github.com/topfreegames/oauth2_proxy` which will put the binary in `$GOROOT/bin`
 Prebuilt binaries can be validated by extracting the file and verifying it against the `sha256sum.txt` checksum file provided for each release starting with version `v2.3`.
 ```
 sha256sum -c sha256sum.txt 2>&1 | grep OK
@@ -37,6 +37,7 @@ Valid providers are :
 * [GitHub](#github-auth-provider)
 * [GitLab](#gitlab-auth-provider)
 * [LinkedIn](#linkedin-auth-provider)
+* [Zendesk](#zendesk-auth-provider)
 
 The provider can be selected using the `provider` configuration value.
 
@@ -154,6 +155,13 @@ OpenID Connect is a spec for OAUTH 2.0 + identity that is implemented by many ma
     -oidc-issuer-url http://127.0.0.1:5556
     -cookie-secure=false
     -email-domain example.com
+
+### Zendesk Auth Provider
+
+1. Follow these steps to register Zendesk OAuth2 application: [Register your application with Zendesk](https://support.zendesk.com/hc/en-us/articles/203663836-Using-OAuth-authentication-with-your-application#topic_s21_lfs_qk).
+2. For "Redirect URLs", provide `https://internal.yourcompany.com/oauth2/callback`.
+3. Provide **Unique Identifier** (passed as `--client-id`) and take note of **Secret** (passed as `--client-secret`).
+3. Provide your subdomain via the `--zendesk-subdomain=<YOUR SUBDOMAIN>` option.
 
 ## Email Authentication
 

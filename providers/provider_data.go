@@ -5,10 +5,12 @@ import (
 )
 
 type ProviderData struct {
-	ProviderName      string
-	ClientID          string
-	ClientSecret      string
-	LoginURL          *url.URL
+	ProviderName string
+	ClientID     string
+	ClientSecret string
+	LoginURL     *url.URL
+
+	// RedeemURL: use authorization code to request an access token
 	RedeemURL         *url.URL
 	ProfileURL        *url.URL
 	ProtectedResource *url.URL
